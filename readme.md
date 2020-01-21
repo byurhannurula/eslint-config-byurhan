@@ -1,4 +1,4 @@
-# eslint-plugin-byurhan
+# eslint-config-byurhan
 
 [![npm version](https://badgen.net/npm/v/eslint-config-byurhan?icon=npm)](https://www.npmjs.com/package/eslint-config-byurhan)
 [![license](https://badgen.net/badge/license/MIT/blue)](https://opensource.org/licenses/MIT)
@@ -18,7 +18,7 @@
 2. Then we need to install the plugin:
 
 ```bash
-npm install --save-dev eslint-plugin-byurhan
+npm install --save-dev eslint-config-byurhan
 ```
 
 3. Create a `.eslintrc` file in the root of your project folder. Your `.eslintrc` file should look like this:
@@ -84,7 +84,9 @@ If you'd like to overwrite eslint or prettier settings, you can add the rules in
     "editor.formatOnSave": false
   },
   // Tell the ESLint plugin to run on save
-  "eslint.autoFixOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
   // Turn off prettier for JS and JSX because we are doing it through eslint already
   "prettier.disableLanguages": ["javascript", "javascriptreact"],
 }
