@@ -83,15 +83,14 @@ If you'd like to overwrite eslint or prettier settings, you can add the rules in
   "[javascriptreact]": {
     "editor.formatOnSave": false
   },
+  // Turn off prettier for JS and JSX because we are doing it through eslint already
+  "prettier.disableLanguages": [
+    "javascript",
+    "javascriptreact"
+  ],
   // Tell the ESLint plugin to run on save
   "editor.codeActionsOnSave": {
-    "source.fixAll": true
+    "source.fixAll.eslint": true
   },
-  // Turn off prettier for JS and JSX because we are doing it through eslint already
-  "prettier.disableLanguages": ["javascript", "javascriptreact"],
 }
 ```
-
-## License
-[MIT](https://opensource.org/licenses/MIT) &copy; [Byurhan Beyzat](https://byurhanbeyzat.com/). <br />
-[Buy me a coffee](https://ko-fi.com/X7X38NNC)
